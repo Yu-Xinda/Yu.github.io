@@ -10,7 +10,7 @@
     - XX年X月X日，XXXX
   </p>
   <p style="font-size: 16px; text-align: center; margin-bottom: 0px;">
-    <a href="/news.html" style="text-decoration: underline; color: #888;">
+    <a href="./news.html" style="text-decoration: underline; color: #888;">
       - 🔺 more -
     </a>
   </p>
