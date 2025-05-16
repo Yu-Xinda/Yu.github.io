@@ -20,7 +20,7 @@
     <a href="/assets/files/paper1.pdf" target="_blank">[PDF]</a>
   </p>
   <p style="font-size: 16px; text-align: center; margin-bottom: 0px;">
-    <a href="/yu-xinda/publication.html" style="text-decoration: underline; color: #888;">
+    <a href="/publication.html" style="text-decoration: underline; color: #888;">
         -🔺 more -
     </a>
   </p>
