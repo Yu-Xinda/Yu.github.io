@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>研究动态时间线</title>
+  <style>
+
+    body {
+      font-family: "Microsoft YaHei", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1000px;
+      margin: 40px auto;
+    }
+
+    .year {
+      flex: 0 0 80px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      padding-top: 20px;
+    }
+
+    .timeline {
+      flex: 1;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .card-header {
+      font-size: 14px;
+      color: #666;
+      padding: 15px 20px 0;
+    }
+
+    .card-header span {
+      margin-right: 10px;
+    }
+
+    .card-image {
+      width: 100%;
+      height: auto;
+    }
+
+    .card-body {
+      padding: 15px 20px 20px;
+    }
+
+    .card-body h3 {
+      font-size: 18px;
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+    .card-body p {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: red;
+      font-weight: bold;
+    }
+    .page-title {
+      text-align: center;
+      font-size: 36px;
+      color: #222;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }    
+  </style>
+</head>
+<body>
+  <h1 class="page-title">News</h1>
+  <div class="container">
+    <div class="year">2023</div>
+    <div class="timeline">
+      
+      <!-- 第一条记录 -->
+      <div class="card">
+        <div class="card-header">
+          <span>9月13, 2023 6:00 PM – 8:00 PM</span> · <span>悉尼大学</span>
+        </div>
+        <img src="./assets/img/teaser_example.png" alt="活动图片" class="card-image">
+        <div class="card-body">
+          <h3>以助理研究员的身份在SCSLab开始新的学术研究生涯</h3>
+          <p>
+            成功完成硕士研究工作，并以助理研究员（RA）的身份在SCSLab开始新的学术研究生涯。感谢
+            <span class="highlight">Athman Bouguettaya</span> 教授，
+            <span class="highlight">Amani Abusafia博士</span> 与
+            <span class="highlight">Abdallah Lakhdari博士</span> 在我硕士研究期间提供的支持。
+          </p>
+        </div>
+      </div>
+
+      <!-- 第二条记录 -->
+      <div class="card">
+        <div class="card-header">
+          <span>8月28, 2023 11:00 AM – 2:00 PM</span> · <span>麦考瑞大学</span>
+        </div>
+        <img src="./assets/img/teaser_example.png" alt="活动图片" class="card-image">
+        <div class="card-body">
+          <h3>第二条活动标题示例</h3>
+          <p>
+            这是第二条活动的描述内容。可以替换为你的实际信息，也可以继续添加 highlight 强调内容。
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
