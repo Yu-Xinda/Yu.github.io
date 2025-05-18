@@ -5,7 +5,7 @@
 <br>
 *如果您喜欢这个项目，欢迎您使用和分享*
 
-如果你想对该项目模板样式进行更改，更多信息请参考该\[[仓库](https://github.com/yaoyao-liu/minimal-light)\]
+如果你想对该项目模板样式进行进一步更改，更多项目细节信息请参考该\[[仓库](https://github.com/yaoyao-liu/minimal-light)\]
 
 ## 使用指南
 ### 在GitHub上使用
