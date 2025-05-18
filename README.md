@@ -10,18 +10,12 @@
 ## 使用指南
 ### 在GitHub上使用
 
-只要在你的项目中添加如下内容的`_config.yml`文件，GitHub Pages 服务就会使用该主题部署网页:
+可以直接下载本项目，并上传至你自己的仓库
 
-```yaml
-remote_theme: yaoyao-liu/minimal-light
-```
-请注意：添加上述内容到你的项目，会直接应用这个仓库的所有的默认设置。
-
-如果你希望编辑任何文件（例如：`index.md`)，你仍需要把该文件拷贝到你的项目中。
-
-你也可以直接 fork 这个仓库(或者[使用这个仓库作为模板](https://docs.github.com/cn/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template))，然后把名字改为`your-username.github.io`.
+也可以直接 fork 这个仓库(或者[使用这个仓库作为模板](https://docs.github.com/cn/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template))，然后把名字改为`your-username.github.io`.
 
 然后，你可以根据[这里的说明](https://docs.github.com/cn/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site)开启这个仓库的GitHub Pages服务。
+
 
 ## 自定义内容
 
@@ -31,7 +25,7 @@ remote_theme: yaoyao-liu/minimal-light
 
 #### 信息栏
 
-本模板有以下的变量, 你可以在`_config.yml`文件中修改:
+主页模板有以下的变量, 你可以在`_config.yml`文件中修改:
 
 ```yaml
 # 基本信息
@@ -67,12 +61,11 @@ index.md用于呈现主页内容，其中分为三大板块内容，introduction
 
 #### news.html
 
-可在news.html中直接编辑news的详情页内容
+可在news.html中直接编辑news的详情页内容，具体可根据new.html代码细节更改内容
 
 #### publication.html
 
 可在publication.html中查看publication的详情页，publication的呈现格式固定，为
-
 
 
 ![1747276258416](./assets/img/README_publication.png)
@@ -90,4 +83,4 @@ index.md用于呈现主页内容，其中分为三大板块内容，introduction
 * [pages-themes/minimal](https://github.com/pages-themes/minimal)
 * [orderedlist/minimal](https://github.com/orderedlist/minimal)
 * [al-folio](https://github.com/alshedivat/al-folio)
-* 
+* [yaoyao-liu/minimal-light](https://github.com/yaoyao-liu/minimal-light)
