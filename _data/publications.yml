@@ -27,7 +27,7 @@ main:
         booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
         year={2025}
       }
-    code: https://github.com/janedoe/super-res
+    code: https://github.com/MrGiovanni/ContinualLearning
     image: ./assets/img/teaser_example.png
 
   - title: "Mnemonics Training: Multi-Class Incremental Learning without Forgetting"
