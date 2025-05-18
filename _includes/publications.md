@@ -5,8 +5,7 @@
 <div style="font-size: 16px; line-height: 1.6; letter-spacing: 0.5px; text-align: justify;">
   <p>
     - Yixiao Zhang, Xinyi Li,Yaoyao Liu*, et al. 
-    Deep Learning for Image Super-Resolution, 
-    <em>MICCAI</em>, 2023.
+    <em>Deep Learning for Image Super-Resolution</em>, <em>MICCAI</em>, 2023.
     <a href="./assets/files/curriculum_vitae.pdf" target="_blank">[PDF]</a>
   </p>
   <p>
