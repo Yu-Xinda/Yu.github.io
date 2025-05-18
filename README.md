@@ -1,8 +1,5 @@
 # README
-
-[![LICENSE](https://img.shields.io/github/license/yaoyao-liu/minimal-light?style=flat-square&logo=creative-commons&color=EF9421)](https://github.com/yaoyao-liu/minimal-light/blob/main/LICENSE)
-
-\[[在线演示](https://yu-xinda.github.io/yu-xinda/)\] 
+\[[在线演示](https://yu-xinda.github.io/)\] 
 
 *这个项目的源代包含的源代码. 基于 GitHub 官方主题之一 [minimal](https://github.com/orderedlist/minimal) 创建以及在该项目的基础上进行修改和客制化*
 <br>
