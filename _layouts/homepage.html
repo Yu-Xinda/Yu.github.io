@@ -62,25 +62,26 @@
 
         <!-- 网站标题 -->
         <h1>{{ site.title }}</h1>
-
+        <!-- 填写邮箱 -->
         {% if site.email %}
         <p style="margin-top: 10px; text-align: left;">
-         &emsp;&nbsp;&nbsp;<i class="fas fa-envelope"></i>&nbsp;&nbsp;{{ site.email }}
+          &emsp;&nbsp;&nbsp;<i class="fas fa-envelope"></i>&nbsp;&nbsp;{{ site.email }}
+            <!--当前的emil图标（包括以下的university图标、location图标）用空格的目的是为了调整布局，使得整体为居中。在修改个人内容后布局会变化请根据具体内容调整布局-->
         </p>
         {% endif %}     
-
+        <!-- 填写学校 -->
         {% if site.university %}
         <p style="margin-top: 10px; text-align: left;">
           &emsp;&nbsp;&nbsp;<i class="fas fa-university"></i>&emsp;&nbsp;&nbsp;{{ site.university }}
         </p>
         {% endif %}
-
+        <!-- 填写当前位置 -->
         {% if site.location %}
         <p style="margin-top: 10px; text-align: left;">
           &emsp;&nbsp;&nbsp;<i class="fas fa-map-marker-alt"></i>&emsp;&nbsp;&nbsp;{{ site.location }}
         </p>
         {% endif %}
-
+        <!-- 填写过往经历 -->
         {% if site.experience %}
             {% assign index = 0 %}
             {% for item in site.experience %}
