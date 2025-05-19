@@ -11,6 +11,19 @@
       background: #f9f9f9;
     }
 
+    .back-button {
+      display: inline-block;
+      margin: 20px 0 0 20px;
+      font-size: 16px;
+      background-color: #e0e0e0;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 15px;
+      cursor: pointer;
+      text-decoration: none;
+      color: #333;
+    }
+
     .container {
       display: flex;
       max-width: 1000px;
@@ -77,21 +90,18 @@
       text-align: center;
       font-size: 36px;
       color: #222;
-      margin-top: 40px;
+      margin-top: 20px;
       margin-bottom: 20px;
       font-weight: bold;
       letter-spacing: 1px;
     }
   </style>
 </head>
-<!-- 返回按钮 -->
-<div style="position: absolute; top: 20px; left: 18%;">
-  <button onclick="window.location.href='.'"
-          style="background-color: #e0e0e0; border: none; border-radius: 8px; padding: 10px 15px; font-size: 15px; cursor: pointer;">
-    Back
-  </button>
-</div>
 <body>
+
+  <!-- 返回按钮 -->
+  <a href="javascript:history.back()" class="back-button">← Back</a>
+
   <h1 class="page-title">News</h1>
 
   <!-- 2025 -->
@@ -99,7 +109,6 @@
     <div class="year">2025</div>
     <div class="timeline">
 
-      <!-- 第一条记录 -->
       <div class="card">
         <div class="card-header">
           <span>MM/DD, 25 XX:XX PM – XX:XX PM</span> · <span>Location</span>
@@ -114,7 +123,6 @@
         </div>
       </div>
 
-      <!-- 第二条记录 -->
       <div class="card">
         <div class="card-header">
           <span>MM/DD, 25 XX:XX AM – XX:XX PM</span> · <span>Location</span>
@@ -135,22 +143,4 @@
     <div class="year">2024</div>
     <div class="timeline">
 
-      <!-- 第三条记录 -->
-      <div class="card">
-        <div class="card-header">
-          <span>MM/DD, 24 XX:XX PM – XX:XX PM</span> · <span>Location</span>
-        </div>
-        <div class="card-body">
-          <h3>第三条活动标题示例</h3>
-          <p>
-            这是第三条活动的描述内容。可以替换为你的实际信息，也可以继续添加 highlight 强调内容。
-            <span class="highlight">强调内容示例</span>。
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-</body>
-</html>
+      <div
