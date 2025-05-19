@@ -1,34 +1,72 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>News!</title>
-  <!-- 引入图标库（如果未引入） -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>News</title>
+
+  <!-- 图标库 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
   <style>
     body {
       font-family: "Microsoft YaHei", sans-serif;
       margin: 0;
       padding: 0;
-      background: #f9f9f9;
+      background-color: white;
+    }
+
+    /* 顶部返回栏 */
+    .top-bar {
+      background-color: white;
+      padding: 20px 40px 10px;
+    }
+
+    .top-bar-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .back-button {
-      display: inline-block;
-      margin: 20px 0 0 20px;
       font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      padding: 8px 15px;
-      cursor: pointer;
       text-decoration: none;
-      color: #333;
+      color: #0056b3;
+      font-weight: bold;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .top-bar h1 {
+      margin: 0 auto;
+      font-size: 28px;
+      text-align: center;
+      flex: 1;
+    }
+
+    /* 外层背景容器 */
+    .page-container {
+      display: flex;
+      justify-content: center;
+      background-color: white;
+      padding: 0 20px 60px;
+    }
+
+    .wrapper {
+      background-color: #e6f0ff;
+      max-width: 1000px;
+      width: 100%;
+      border-radius: 10px;
+      padding: 40px;
     }
 
     .container {
       display: flex;
-      max-width: 800px;  /* 原来是 1000px，缩小 */
-      margin: 40px auto;
+      max-width: 1000px;
+      margin-bottom: 40px;
     }
 
     .year {
@@ -46,20 +84,16 @@
     .card {
       background: #fff;
       border-radius: 8px;
-      margin-bottom: 20px;  /* 缩小间距 */
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);  /* 减弱阴影 */
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
       overflow: hidden;
-      font-size: 13px;  /* 整体文字略微缩小 */
+      font-size: 13px;
     }
 
     .card-header {
       font-size: 14px;
       color: #666;
       padding: 15px 20px 0;
-    }
-
-    .card-header span {
-      margin-right: 10px;
     }
 
     .card-image {
@@ -88,77 +122,93 @@
       font-weight: bold;
     }
 
-    .page-title {
-      text-align: center;
-      font-size: 36px;
-      color: #222;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      font-weight: bold;
-      letter-spacing: 1px;
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .year {
+        margin-bottom: 10px;
+      }
+
+      .top-bar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .top-bar h1 {
+        margin: 10px 0 0;
+        text-align: left;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- 顶部返回键 + 标题栏（蓝色背景中间标题） -->
-  <div style="max-width: 1000px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;">
-    <a href="javascript:history.back()" class="back-button" style="font-size: 20px; text-decoration: none; color: #0056b3 ; font-weight: bold;">
-      <i class="fas fa-arrow-left"></i> Back
-    </a>
-    <h1 style="margin: 0 auto; font-size: 28px; text-align: center; flex: 1; ">News</h1>
-    <div style="width: 60px;"></div> <!-- 占位保持左右平衡 -->
-  </div>
 
-  <!-- 2025 -->
-  <div class="container">
-    <div class="year">2025</div>
-    <div class="timeline">
-
-      <div class="card">
-        <div class="card-header">
-          <span>MM/DD, 25 XX:XX PM – XX:XX PM</span> · <span>Location</span>
-        </div>
-        <img src="./assets/img/academics-activity.png" alt="活动图片" class="card-image">
-        <div class="card-body">
-          <h3>第一条活动标题示例</h3>
-          <p>
-            这是第一条活动的描述内容。可以替换为你的实际信息，也可以继续添加 highlight 强调内容。
-            <span class="highlight">强调内容示例</span>。
-          </p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <span>MM/DD, 25 XX:XX AM – XX:XX PM</span> · <span>Location</span>
-        </div>
-        <div class="card-body">
-          <h3>第二条活动标题示例</h3>
-          <p>
-            这是第二条活动的描述内容。可以替换为你的实际信息，也可以继续添加 highlight 强调内容。
-          </p>
-        </div>
-      </div>
-
+  <!-- 顶部返回按钮 + 页面标题 -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <a href="javascript:history.back()" class="back-button"><i class="fas fa-arrow-left"></i> Back</a>
+      <h1>News</h1>
+      <div style="width: 60px;"></div> <!-- 占位保持居中 -->
     </div>
   </div>
 
-  <!-- 2024 -->
-  <div class="container">
-    <div class="year">2024</div>
-    <div class="timeline">
+  <!-- 中心页面内容部分 -->
+  <div class="page-container">
+    <div class="wrapper">
 
-      <!-- 第三条记录 -->
-      <div class="card">
-        <div class="card-header">
-          <span>MM/DD, 24 XX:XX PM – XX:XX PM</span> · <span>Location</span>
+      <!-- Year: 2025 -->
+      <div class="container">
+        <div class="year">2025</div>
+        <div class="timeline">
+
+          <div class="card">
+            <div class="card-header">
+              <span>05/19, 25 14:00 PM – 17:00 PM</span> · <span>Huzhou Normal University</span>
+            </div>
+            <img src="./assets/img/academics-activity.png" alt="活动图片" class="card-image">
+            <div class="card-body">
+              <h3>学术交流活动：AI与艺术的交汇</h3>
+              <p>
+                参与由人工智能研究所举办的跨学科讲座，探讨AI在图像生成、3D建模和交互设计中的实际应用。
+                <span class="highlight">重点内容包括Stable Diffusion、Tripo AI、TouchDesigner。</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <span>03/12, 25 10:00 AM – 12:00 PM</span> · <span>Online</span>
+            </div>
+            <div class="card-body">
+              <h3>线上讲座：轻量化人脸识别模型设计</h3>
+              <p>
+                分享于ICCC 2023发表的论文成果，讲述图像质量指标在活体检测中的新思路。
+              </p>
+            </div>
+          </div>
+
         </div>
-        <div class="card-body">
-          <h3>第三条活动标题示例</h3>
-          <p>
-            这是第三条活动的描述内容。可以替换为你的实际信息，也可以继续添加 highlight 强调内容。
-            <span class="highlight">强调内容示例</span>。
-          </p>
+      </div>
+
+      <!-- Year: 2024 -->
+      <div class="container">
+        <div class="year">2024</div>
+        <div class="timeline">
+
+          <div class="card">
+            <div class="card-header">
+              <span>11/03, 24 13:00 PM – 16:00 PM</span> · <span>Zhejiang Wanli University</span>
+            </div>
+            <div class="card-body">
+              <h3>图像处理与嵌入式系统研讨会</h3>
+              <p>
+                汇报本科阶段关于 <span class="highlight">指纹融合与图像增强</span> 的项目经验，吸引多个实验室负责人关注。
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
 
