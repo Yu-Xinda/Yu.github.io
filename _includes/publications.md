@@ -4,13 +4,8 @@
 <br>
 <div style="font-size: 16px; line-height: 1.6; letter-spacing: 0.5px; text-align: justify;">
   <p>
-    - Yixiao Zhang, Xinyi Li,Yaoyao Liu*, et al. 
-    <em>Deep Learning for Image Super-Resolution</em>, <em>MICCAI</em>, 2023.
-    <a href="./assets/files/curriculum_vitae.pdf" target="_blank">[PDF]</a>
-  </p>
-  <p>
-    - Yaoyao Liu, Yuting Su, An-An Liu*, et al. 
-    <em>Mnemonics Training: Multi-Class Incremental Learning without Forgetting</em>, <em>CVPR</em>, 2020.
+    - Yaoyao Liu*, Wen Liu, Xinda Yu ,et al. 
+    <em>Can Image Quality Metrics Detect Face Liveness?</em>, <em>ICCC</em>, 2023.
     <a href="./assets/files/curriculum_vitae.pdf" target="_blank">[PDF]</a>
   </p>
   <p>
