@@ -4,13 +4,8 @@
 <br>
 <div style="font-size: 16px; line-height: 1.6; letter-spacing: 0.5px; text-align: justify;">
   <p>
-    - Yaoyao Liu*, Wen Liu, Xinda Yu ,et al. 
-    <em>Can Image Quality Metrics Detect Face Liveness?</em>, <em>ICCC</em>, 2023.
-    <a href="./assets/files/curriculum_vitae.pdf" target="_blank">[PDF]</a>
-  </p>
-  <p>
-    - Author1, Author2, Author3*, et al.  <!--一次建议只展示三个author，为第一作者，第二作者，通讯作者--> 
-    <em>Paper Title</em>, <em>Abbreviation of journal/conference name</em>, year.<!--展示论文名，期刊/会议缩写，年份--> 
+    - Yaoyao Liu*, Wen Liu, Xinda Yu ,et al. <!--一次建议只展示三个author，为第一作者，第二作者，通讯作者--> 
+    <em>Can Image Quality Metrics Detect Face Liveness?</em>, <em>ICCC</em>, 2023.<!--展示论文名，期刊/会议缩写，年份--> 
     <a href="./assets/files/curriculum_vitae.pdf" target="_blank">[PDF]</a>
   </p>
   <p style="font-size: 16px; text-align: center; margin-bottom: 0px;">
