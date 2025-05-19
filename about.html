@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Academic Homepage</title>
+  <title>About Me</title>
 
   <!-- 字体样式 -->
   <link rel="stylesheet" href="./assets/css/font.css" />
@@ -18,6 +18,37 @@
       background-color: white;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       color: #333;
+    }
+
+    /* 顶部标题栏 */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header h1 {
+      margin: 0 auto;
+      font-size: 28px;
+      text-align: center;
+      flex: 1;
+    }
+
+    .back-button {
+      color: #0056b3;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .back-button i {
+      margin-right: 6px;
     }
 
     .page-container {
@@ -63,11 +94,6 @@
       flex: 2 1 500px;
     }
 
-    h1 {
-      margin-top: 0;
-      font-size: 28px;
-    }
-
     h2 {
       font-size: 20px;
       margin-top: 20px;
@@ -103,20 +129,23 @@
       .left, .right {
         width: 100%;
       }
+      .header h1 {
+        font-size: 22px;
+      }
     }
   </style>
 </head>
-<!-- 返回按钮 -->
-<div style="position: absolute; top: 20px; left: 18%;">
-  <button onclick="window.location.href='.'"
-          style="background-color: #e0e0e0; border: none; border-radius: 8px; padding: 10px 15px; font-size: 15px; cursor: pointer;">
-    Back
-  </button>
-</div>
+
 <body>
+  <!-- 顶部标题栏 -->
+  <div class="header">
+    <a href="javascript:history.back()" class="back-button"><i class="fas fa-arrow-left"></i> Back</a>
+    <h1>About Me</h1>
+    <div style="width: 70px;"></div> <!-- 占位对称 Back -->
+  </div>
+
   <div class="page-container">
     <div class="wrapper">
-      <h1 class="page-title">About me</h1>
       <!-- 左侧区域：头像 + 社交 -->
       <div class="left">
         <img src="your-photo.jpg" alt="Profile Photo" />
@@ -131,8 +160,8 @@
 
       <!-- 右侧区域：简介 -->
       <div class="right">
-        <h1>Changqian Yu</h1>
-        <h2>Senior Technical Specialist @ Kunlun Tech</h2>
+        <h2>Changqian Yu</h2>
+        <h3>Senior Technical Specialist @ Kunlun Tech</h3>
 
         <p>
           As a Senior Technical Specialist at <strong>Kunlun Tech</strong>, I lead a team developing cutting-edge large multimodal models, with expertise in Diffusion and VLM technologies.
