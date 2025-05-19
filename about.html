@@ -129,9 +129,15 @@
 
   <!-- 顶部返回按钮 + 标题 -->
   <div class="top-bar">
-    <a href="javascript:history.back()" class="back-button"><i class="fas fa-arrow-left"></i> Back</a>
     <h1>About Me</h1>
     <div style="width: 60px;"></div> <!-- 占位符保持平衡 -->
+  </div>
+  <!-- 返回按钮 -->
+  <div style="position: absolute; top: 20px; left: 18%;">
+    <button onclick="window.location.href='.'"
+            style="background-color: #e0e0e0; border: none; border-radius: 8px; padding: 10px 15px; font-size: 15px; cursor: pointer;">
+      Back
+    </button>
   </div>
 
   <!-- 中间蓝色主体部分 -->
