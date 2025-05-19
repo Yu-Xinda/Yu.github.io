@@ -1,7 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mingyang Deng</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e0e0e0; /* 灰色边 */
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 40px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    .profile {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .profile img {
+      width: 150px;
+      height: auto;
+      border-radius: 4px;
+      margin-left: 20px;
+    }
+
+    .awards, .publications {
+      margin-top: 30px;
+    }
+
+    .awards ul, .publications ul {
+      padding-left: 20px;
+    }
+
+    .publications a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    .publications a:hover {
+      text-decoration: underline;
+    }
+
+    .email {
+      margin-top: 10px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
 <!-- 返回按钮 -->
 <div style="position: absolute; top: 20px; left: 18%;">
   <button onclick="window.location.href='.'"
           style="background-color: #e0e0e0; border: none; border-radius: 8px; padding: 10px 15px; font-size: 15px; cursor: pointer;">
     Back
   </button>
-</div>
+</div> 
+<body>
+  <div class="container">
+    <h1>Mingyang Deng</h1>
+    <div class="profile">
+      <div class="bio">
+        <p>Hello! I'm Mingyang Deng, a first-year PhD student at MIT, where I'm fortunate to be advised by Prof. <a href="#">Kaiming He</a>. My research focuses on machine learning.</p>
+        <p>I earned my undergraduate degree from MIT, double majoring in Mathematics and Computer Science. During my studies, I had the invaluable opportunity to collaborate with Prof. <a href="#">Tommi Jaakkola</a>... and Prof. <a href="#">Yufei Zhao</a>.</p>
+        <p>Prior to my PhD, I gained valuable industry experience through internships at Google DeepMind, Citadel Securities, and Pika.</p>
+        <p class="email">You can contact me at dengm at mit dot edu and view my resume <a href="#">here</a>.</p>
+      </div>
+      <img src="page.jpg" alt="Mingyang Deng">
+    </div>
+
+    <div class="awards">
+      <h2>Selected Awards</h2>
+      <ul>
+        <li>1st place @ 45th Annual ICPC World Finals</li>
+        <li>Putnam Fellow @ 83rd William Lowell Putnam Competition</li>
+        <li>Gold medal (1st place) @ 33rd IOI</li>
+        <li>Gold medal @ 60th IMO</li>
+        <li>2nd place @ HackMIT 2021</li>
+        <li>4th place @ Google Code Jam Final 2021</li>
+      </ul>
+    </div>
+
+    <div class="publications">
+      <h2>Publications</h2>
+      <ul>
+        <li><a href="#">Autoregressive Image Generation without Vector Quantization</a></li>
+        <li><a href="#">Restart Sampling for Improving Generative Processes</a></li>
+        <li><a href="#">Measuring Feature Sparsity in Language Models</a></li>
+        <li><a href="#">Uniform sets with few progressions via colorings</a></li>
+        <li><a href="#">On Problems Related to Unbounded SubsetSum</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
