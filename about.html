@@ -1,106 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Mingyang Deng</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Academic Homepage</title>
+
+  <!-- 字体样式 -->
+  <link rel="stylesheet" href="./assets/css/font.css" />
+
+  <!-- 图标库 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css"/>
+
   <style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #e0e0e0; /* 灰色背景 */
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 20px auto;
-    background-color: white;
-    padding: 40px;
-    /* 添加明显的阴影效果 */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15), 0 0 40px rgba(0, 0, 0, 0.05);
-    border-radius: 6px;
-  }
-  
-  h1 {
-    margin-top: 0;
-  }
-  
-  .profile {
-    display: flex;
-    align-items: flex-start;
-  }
-  
-  .profile img {
-    width: 150px;
-    height: auto;
-    border-radius: 4px;
-    margin-left: 20px;
-  }
-  
-  .awards, .publications {
-    margin-top: 30px;
-  }
-  
-  .awards ul, .publications ul {
-    padding-left: 20px;
-  }
-  
-  .publications a {
-    color: #0077cc;
-    text-decoration: none;
-  }
-  
-  .publications a:hover {
-    text-decoration: underline;
-  }
-  
-  .email {
-    margin-top: 10px;
-    font-size: 0.9em;
-  }
+    body {
+      margin: 0;
+      background-color: white;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #333;
+    }
+
+    .page-container {
+      display: flex;
+      justify-content: center;
+      background-color: white;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .wrapper {
+      background-color: #e6f0ff;
+      max-width: 1000px;
+      width: 100%;
+      border-radius: 10px;
+      padding: 40px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .left {
+      flex: 1 1 250px;
+      text-align: center;
+    }
+
+    .left img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .social-icons a {
+      margin: 0 5px;
+      font-size: 24px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .right {
+      flex: 2 1 500px;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 28px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+    p {
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin: 8px 0;
+    }
+
+    a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+      .left, .right {
+        width: 100%;
+      }
+    }
   </style>
 </head>
-<!-- 返回按钮 -->
-<div style="position: absolute; top: 20px; left: 18%;">
-  <button onclick="window.location.href='.'"
-          style="background-color: #e0e0e0; border: none; border-radius: 8px; padding: 10px 15px; font-size: 15px; cursor: pointer;">
-    Back
-  </button>
-</div> 
+
 <body>
-  <div class="container">
-    <h1>Mingyang Deng</h1>
-    <div class="profile">
-      <div class="bio">
-        <p>Hello! I'm Mingyang Deng, a first-year PhD student at MIT, where I'm fortunate to be advised by Prof. <a href="#">Kaiming He</a>. My research focuses on machine learning.</p>
-        <p>I earned my undergraduate degree from MIT, double majoring in Mathematics and Computer Science. During my studies, I had the invaluable opportunity to collaborate with Prof. <a href="#">Tommi Jaakkola</a>... and Prof. <a href="#">Yufei Zhao</a>.</p>
-        <p>Prior to my PhD, I gained valuable industry experience through internships at Google DeepMind, Citadel Securities, and Pika.</p>
-        <p class="email">You can contact me at dengm at mit dot edu and view my resume <a href="#">here</a>.</p>
+  <div class="page-container">
+    <div class="wrapper">
+      <!-- 左侧区域：头像 + 社交 -->
+      <div class="left">
+        <img src="your-photo.jpg" alt="Profile Photo" />
+        <div class="social-icons">
+          <a href="#"><i class="fas fa-file-alt"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fas fa-envelope"></i></a>
+          <a href="#"><i class="ai ai-zhihu"></i></a>
+        </div>
       </div>
-      <img src="page.jpg" alt="Mingyang Deng">
-    </div>
 
-    <div class="awards">
-      <h2>Selected Awards</h2>
-      <ul>
-        <li>1st place @ 45th Annual ICPC World Finals</li>
-        <li>Putnam Fellow @ 83rd William Lowell Putnam Competition</li>
-        <li>Gold medal (1st place) @ 33rd IOI</li>
-        <li>Gold medal @ 60th IMO</li>
-        <li>2nd place @ HackMIT 2021</li>
-        <li>4th place @ Google Code Jam Final 2021</li>
-      </ul>
-    </div>
+      <!-- 右侧区域：简介 -->
+      <div class="right">
+        <h1>Changqian Yu</h1>
+        <h2>Senior Technical Specialist @ Kunlun Tech</h2>
 
-    <div class="publications">
-      <h2>Publications</h2>
-      <ul>
-        <li><a href="#">Autoregressive Image Generation without Vector Quantization</a></li>
-        <li><a href="#">Restart Sampling for Improving Generative Processes</a></li>
-        <li><a href="#">Measuring Feature Sparsity in Language Models</a></li>
-        <li><a href="#">Uniform sets with few progressions via colorings</a></li>
-        <li><a href="#">On Problems Related to Unbounded SubsetSum</a></li>
-      </ul>
+        <p>
+          As a Senior Technical Specialist at <strong>Kunlun Tech</strong>, I lead a team developing cutting-edge large multimodal models, with expertise in Diffusion and VLM technologies.
+          My tenure at <strong>Meituan’s Autonomous Delivery Department</strong> equipped me with a robust understanding of real-world AI applications.
+        </p>
+
+        <p>
+          I obtained my Ph.D. degree in 2021 from the <strong>Huazhong University of Science and Technology</strong>, advised by 
+          <a href="#">Prof. Nong Sang</a> and <a href="#">Prof. Changxin Gao</a>. I also studied at the <strong>University of Adelaide</strong>, working with 
+          <a href="#">Prof. Chunhua Shen</a>, and received the <strong>Excellent Doctoral Dissertation Award</strong>.
+        </p>
+
+        <p>
+          I also interned at <strong>Microsoft Research Asia</strong> and <strong>Megvii (Face++)</strong>, collaborating with 
+          <a href="#">Dr. Jingdong Wang</a>, <a href="#">Dr. Gang Yu</a>, and <a href="#">Dr. Jian Sun</a>.
+        </p>
+
+        <h2>Selected Works</h2>
+        <ul>
+          <li><a href="#">BiSeNet</a> (ECCV 2018 Top-10, Citation > 2500)</li>
+          <li><a href="#">BiSeNetV2</a> (IJCV & ESI-Hot, Citation > 1000)</li>
+          <li><a href="#">DFNet</a> (CVPR, Citation > 900)</li>
+          <li><a href="#">Lite-HRNet</a> (CVPR, Citation > 300)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Academic Homepage</title>
+
+  <!-- 字体样式 -->
+  <link rel="stylesheet" href="./assets/css/font.css" />
+
+  <!-- 图标库 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css"/>
+
+  <style>
+    body {
+      margin: 0;
+      background-color: white;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #333;
+    }
+
+    .page-container {
+      display: flex;
+      justify-content: center;
+      background-color: white;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .wrapper {
+      background-color: #e6f0ff;
+      max-width: 1000px;
+      width: 100%;
+      border-radius: 10px;
+      padding: 40px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .left {
+      flex: 1 1 250px;
+      text-align: center;
+    }
+
+    .left img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .social-icons a {
+      margin: 0 5px;
+      font-size: 24px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .right {
+      flex: 2 1 500px;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 28px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+    p {
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin: 8px 0;
+    }
+
+    a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+      .left, .right {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-container">
+    <div class="wrapper">
+      <!-- 左侧区域：头像 + 社交 -->
+      <div class="left">
+        <img src="your-photo.jpg" alt="Profile Photo" />
+        <div class="social-icons">
+          <a href="#"><i class="fas fa-file-alt"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fas fa-envelope"></i></a>
+          <a href="#"><i class="ai ai-zhihu"></i></a>
+        </div>
+      </div>
+
+      <!-- 右侧区域：简介 -->
+      <div class="right">
+        <h1>Changqian Yu</h1>
+        <h2>Senior Technical Specialist @ Kunlun Tech</h2>
+
+        <p>
+          As a Senior Technical Specialist at <strong>Kunlun Tech</strong>, I lead a team developing cutting-edge large multimodal models, with expertise in Diffusion and VLM technologies.
+          My tenure at <strong>Meituan’s Autonomous Delivery Department</strong> equipped me with a robust understanding of real-world AI applications.
+        </p>
+
+        <p>
+          I obtained my Ph.D. degree in 2021 from the <strong>Huazhong University of Science and Technology</strong>, advised by 
+          <a href="#">Prof. Nong Sang</a> and <a href="#">Prof. Changxin Gao</a>. I also studied at the <strong>University of Adelaide</strong>, working with 
+          <a href="#">Prof. Chunhua Shen</a>, and received the <strong>Excellent Doctoral Dissertation Award</strong>.
+        </p>
+
+        <p>
+          I also interned at <strong>Microsoft Research Asia</strong> and <strong>Megvii (Face++)</strong>, collaborating with 
+          <a href="#">Dr. Jingdong Wang</a>, <a href="#">Dr. Gang Yu</a>, and <a href="#">Dr. Jian Sun</a>.
+        </p>
+
+        <h2>Selected Works</h2>
+        <ul>
+          <li><a href="#">BiSeNet</a> (ECCV 2018 Top-10, Citation > 2500)</li>
+          <li><a href="#">BiSeNetV2</a> (IJCV & ESI-Hot, Citation > 1000)</li>
+          <li><a href="#">DFNet</a> (CVPR, Citation > 900)</li>
+          <li><a href="#">Lite-HRNet</a> (CVPR, Citation > 300)</li>
+        </ul>
+      </div>
     </div>
   </div>
 </body>
