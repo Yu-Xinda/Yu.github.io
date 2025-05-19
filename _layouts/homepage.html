@@ -1,57 +1,72 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <!-- 填写网页标题页 -->
-    <title>{{ site.title }} ‘s homepage </title>
+<html lang="{{ site.lang | default: 'en-US' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.title }}‘s homepage</title>
+  <meta name="description" content="{{ site.description }}">
+  {% if site.keywords %}
+  <meta name="keywords" content="{{ site.keywords }}">
+  {% endif %}
+  {% if site.canonical %}
+  <link rel="canonical" href="{{ site.canonical }}"/>
+  {% endif %}
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ site.description }}">
-    {% if site.keywords %}
-    <meta name="keywords" content="{{ site.keywords }}">
-    {% endif %}
-    {% if site.canonical %}
-    <link rel="canonical" href="{{ site.canonical }}"/>
-    {% endif %}
+  <link rel="icon" media="(prefers-color-scheme:dark)" href="{{ site.favicon_dark }}" type="image/png" />
+  <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon }}" type="image/png" />
+  <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
 
-    <link rel="icon" media="(prefers-color-scheme:dark)" href="{{ site.favicon_dark }}" type="image/png" />
-    <link rel="icon" media="(prefers-color-scheme:light)" href="{{ site.favicon }}" type="image/png" />
-    <script src="./assets/js/favicon-switcher.js" type="application/javascript"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  {% if site.font == "Sans Serif" %}
+  <link rel="stylesheet" href="./assets/css/font_sans_serif.css">
+  {% else %}
+  <link rel="stylesheet" href="./assets/css/font.css">
+  {% endif %}
+  {% if site.auto_dark_mode %}
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/publications.css">
+  {% else %}
+  <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css">
+  <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
+  {% endif %}
 
-    <link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    {% if site.font == "Sans Serif" %}
-    <link rel="stylesheet" href="./assets/css/font_sans_serif.css">
-    {% else %}
-    <link rel="stylesheet" href="./assets/css/font.css">
-    {% endif %}
-    {% if site.auto_dark_mode %}
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/publications.css">
-    {% else %}
-    <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css">
-    <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
-    {% endif %}
-    <style>
-      .social-icons a {
-        display: inline-block;
-        vertical-align: middle;
-        margin: 0 5px;
-      }
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0; /* 灰色背景 */
+    }
 
-      .social-icons i {
-        margin-right: 5px;
-      }
+    .container {
+      max-width: 1000px; /* 调整灰边宽度：越小越宽边 */
+      margin: 50px auto;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
 
-      .social-icons p {
-        display: inline-block;
-        vertical-align: middle;
-      }
-    </style>
-  </head>
-  <body>
+    .social-icons a {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 5px;
+    }
+
+    .social-icons i {
+      margin-right: 5px;
+    }
+
+    .social-icons p {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
     <div class="wrapper">
       <header>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -61,68 +76,64 @@
         </a>
         {% endif %}
 
-        <!-- 网站标题 -->
         <h1>{{ site.title }}</h1>
-        <!-- 填写邮箱 -->
+
         {% if site.email %}
         <p style="margin-top: 10px; text-align: left;">
           &emsp;&nbsp;&nbsp;<i class="fas fa-envelope"></i>&nbsp;&nbsp;{{ site.email }}
-            <!--当前的emil图标（包括以下的university图标、location图标）用空格的目的是为了调整布局，使得整体为居中。在修改个人内容后布局会变化请根据具体内容调整布局-->
         </p>
         {% endif %}     
-        <!-- 填写学校 -->
+
         {% if site.university %}
         <p style="margin-top: 10px; text-align: left;">
           &emsp;&nbsp;&nbsp;<i class="fas fa-university"></i>&emsp;&nbsp;&nbsp;{{ site.university }}
         </p>
         {% endif %}
-        <!-- 填写当前位置 -->
+
         {% if site.location %}
         <p style="margin-top: 10px; text-align: left;">
           &emsp;&nbsp;&nbsp;<i class="fas fa-map-marker-alt"></i>&emsp;&nbsp;&nbsp;{{ site.location }}
         </p>
         {% endif %}
-        <!-- 填写过往经历 -->
+
         {% if site.experience %}
-            {% assign index = 0 %}
-            {% for item in site.experience %}
-                {% assign mod = index | modulo: 2 %}
-                {% if mod == 0 %}
-                  <p style="text-align: left; margin-top: 2px; margin-bottom: 1px; ">{{ item }}</p>
-                {% else %}
-                  <p style="text-align: left; margin-top: 1px; margin-bottom: 2px; ">&emsp;&emsp;{{ item }}</p>
-                {% endif %}
-                {% assign index = index | plus: 1 %}
-                {% endfor %}
+        {% assign index = 0 %}
+        {% for item in site.experience %}
+          {% assign mod = index | modulo: 2 %}
+          {% if mod == 0 %}
+            <p style="text-align: left; margin-top: 2px; margin-bottom: 1px;">{{ item }}</p>
+          {% else %}
+            <p style="text-align: left; margin-top: 1px; margin-bottom: 2px;">&emsp;&emsp;{{ item }}</p>
+          {% endif %}
+          {% assign index = index | plus: 1 %}
+        {% endfor %}
         {% endif %}
         <br>
-
       </header>
+
       <section>
-
-      {{ content }}
-
-      <br>
-
-      {% if site.enable_footnote %}
-      <p></p>
-      {% endif %}
-
+        {{ content }}
+        <br>
+        {% if site.enable_footnote %}
+        <p></p>
+        {% endif %}
       </section>
+
       <footer>
-        
       </footer>
     </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-    {% if site.google_analytics %}
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', '{{ site.google_analytics }}', 'auto');
-      ga('send', 'pageview');
-    </script>
-    {% endif %}
-  </body>
+  </div>
+
+  <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+  {% if site.google_analytics %}
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', '{{ site.google_analytics }}', 'auto');
+    ga('send', 'pageview');
+  </script>
+  {% endif %}
+</body>
 </html>
