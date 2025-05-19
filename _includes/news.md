@@ -4,7 +4,7 @@
 <br>
 <div style="font-size: 16px; line-height: 1.6; letter-spacing: 0.5px; text-align: justify;">
   <p>
-    - XX年X月X日，XXXX
+    - 2025.05 I was admitted to Huzhou University as a master's student！！
   </p>
   <p>
     - XX年X月X日，XXXX
