@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>News!</title>
+  <!-- 引入图标库（如果未引入） -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>  
   <style>
     body {
       font-family: "Microsoft YaHei", sans-serif;
@@ -99,10 +101,14 @@
 </head>
 <body>
 
-  <!-- 返回按钮 -->
-  <a href="javascript:history.back()" class="back-button">← Back</a>
-
-  <h1 class="page-title">News</h1>
+  <!-- 返回按钮 + 居中标题 -->
+  <div class="top-bar" style="display: flex; align-items: center; justify-content: space-between; padding: 20px 40px 10px; max-width: 1000px; margin: 0 auto;">
+    <a href="javascript:history.back()" class="back-button" style="font-size: 16px; text-decoration: none; color: #0056b3; font-weight: bold;">
+      <i class="fas fa-arrow-left"></i> Back
+    </a>
+    <h1 style="margin: 0 auto; font-size: 36px; text-align: center; flex: 1; color: #222;">News</h1>
+    <div style="width: 60px;"></div> <!-- 占位保持左右平衡 -->
+  </div>
 
   <!-- 2025 -->
   <div class="container">
