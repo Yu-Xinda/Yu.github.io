@@ -80,6 +80,20 @@
         display: inline-block;
         vertical-align: middle;
       }
+      .profile-icon {
+        color: #0077cc;
+        font-size: 16px;
+        margin-right: 8px;
+        vertical-align: middle;
+      }
+      .profile-text {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        color: #333;
+        line-height: 1.6;
+        text-align: left;
+        margin-top: 8px;
+      }
     </style>
   </head>
 
@@ -96,20 +110,19 @@
           <h1>{{ site.title }}</h1>
 
           {% if site.email %}
-          <p style="margin-top: 10px; text-align: left;">
-            &emsp;&nbsp;&nbsp;<i class="fas fa-envelope"></i>&nbsp;&nbsp;{{ site.email }}
+          <p class="profile-text">
+            &emsp;&nbsp;&nbsp;<i class="fas fa-envelope profile-icon"></i>&nbsp;&nbsp;{{ site.email }}
           </p>
           {% endif %}
 
           {% if site.university %}
-          <p style="margin-top: 10px; text-align: left;">
-            &emsp;&nbsp;&nbsp;<i class="fas fa-university"></i>&emsp;&nbsp;&nbsp;{{ site.university }}
+          <p class="profile-text">
+            &emsp;&nbsp;&nbsp;<i class="fas fa-university profile-icon"></i>&emsp;&nbsp;&nbsp;{{ site.university }}
           </p>
           {% endif %}
-
           {% if site.location %}
-          <p style="margin-top: 10px; text-align: left;">
-            &emsp;&nbsp;&nbsp;<i class="fas fa-map-marker-alt"></i>&emsp;&nbsp;&nbsp;{{ site.location }}
+          <p class="profile-text">
+            &emsp;&nbsp;&nbsp;<i class="fas fa-map-marker-alt profile-icon"></i>&emsp;&nbsp;&nbsp;{{ site.location }}
           </p>
           {% endif %}
 
@@ -118,9 +131,9 @@
             {% for item in site.experience %}
               {% assign mod = index | modulo: 2 %}
               {% if mod == 0 %}
-              <p style="text-align: left; margin-top: 2px; margin-bottom: 1px;">{{ item }}</p>
+              <p class="profile-text"">{{ item }}</p>
               {% else %}
-              <p style="text-align: left; margin-top: 1px; margin-bottom: 2px;">&emsp;&emsp;{{ item }}</p>
+              <p class="profile-text"">&emsp;&emsp;{{ item }}</p>
               {% endif %}
               {% assign index = index | plus: 1 %}
             {% endfor %}
