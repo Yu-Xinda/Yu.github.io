@@ -3,41 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>News</title>
+  <title>About Me</title>
 
   <!-- 图标库 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 
   <style>
     body {
-      font-family: "Microsoft YaHei", sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #333;
       background-color: white;
     }
 
-    /* 顶部返回栏 */
+    /* 顶部区域 */
     .top-bar {
-      background-color: white;
-      padding: 20px 40px 10px;
-    }
-
-    .top-bar-inner {
-      max-width: 1000px;
-      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 20px 40px 10px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
-    .back-button {
+    .top-bar .back-button {
       font-size: 16px;
       text-decoration: none;
       color: #0056b3;
       font-weight: bold;
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
     }
 
     .top-bar h1 {
@@ -47,7 +40,6 @@
       flex: 1;
     }
 
-    /* 外层背景容器 */
     .page-container {
       display: flex;
       justify-content: center;
@@ -61,77 +53,67 @@
       width: 100%;
       border-radius: 10px;
       padding: 40px;
-    }
-
-    .container {
       display: flex;
-      max-width: 1000px;
-      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 40px;
     }
 
-    .year {
-      flex: 0 0 80px;
-      font-size: 24px;
-      font-weight: bold;
-      color: #333;
-      padding-top: 20px;
+    .left {
+      flex: 1 1 250px;
+      text-align: center;
     }
 
-    .timeline {
-      flex: 1;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-      overflow: hidden;
-      font-size: 13px;
-    }
-
-    .card-header {
-      font-size: 14px;
-      color: #666;
-      padding: 15px 20px 0;
-    }
-
-    .card-image {
+    .left img {
       width: 100%;
-      height: auto;
+      max-width: 250px;
+      border-radius: 10px;
+      margin-bottom: 20px;
     }
 
-    .card-body {
-      padding: 15px 20px 20px;
-    }
-
-    .card-body h3 {
-      font-size: 18px;
-      color: #000;
-      margin-bottom: 10px;
-    }
-
-    .card-body p {
-      font-size: 14px;
+    .social-icons a {
+      margin: 0 5px;
+      font-size: 22px;
       color: #333;
-      line-height: 1.6;
+      text-decoration: none;
     }
 
-    .highlight {
-      color: red;
-      font-weight: bold;
+    .right {
+      flex: 2 1 500px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+    p {
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin: 8px 0;
+    }
+
+    a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 768px) {
-      .container {
+      .wrapper {
         flex-direction: column;
       }
 
-      .year {
-        margin-bottom: 10px;
-      }
-
-      .top-bar-inner {
+      .top-bar {
         flex-direction: column;
         align-items: flex-start;
       }
@@ -145,73 +127,42 @@
 </head>
 <body>
 
-  <!-- 顶部返回按钮 + 页面标题 -->
+  <!-- 顶部返回按钮 + 标题 -->
   <div class="top-bar">
-    <div class="top-bar-inner">
-      <a href="javascript:history.back()" class="back-button"><i class="fas fa-arrow-left"></i> Back</a>
-      <h1>News</h1>
-      <div style="width: 60px;"></div> <!-- 占位保持居中 -->
-    </div>
+    <a href="javascript:history.back()" class="back-button"><i class="fas fa-arrow-left"></i> Back</a>
+    <h1>About Me</h1>
+    <div style="width: 60px;"></div> <!-- 占位符保持平衡 -->
   </div>
-
-  <!-- 中心页面内容部分 -->
+  <!-- 中间蓝色主体部分 -->
   <div class="page-container">
     <div class="wrapper">
-
-      <!-- Year: 2025 -->
-      <div class="container">
-        <div class="year">2025</div>
-        <div class="timeline">
-
-          <div class="card">
-            <div class="card-header">
-              <span>05/19, 25 14:00 PM – 17:00 PM</span> · <span>Huzhou Normal University</span>
-            </div>
-            <img src="./assets/img/academics-activity.png" alt="活动图片" class="card-image">
-            <div class="card-body">
-              <h3>学术交流活动：AI与艺术的交汇</h3>
-              <p>
-                参与由人工智能研究所举办的跨学科讲座，探讨AI在图像生成、3D建模和交互设计中的实际应用。
-                <span class="highlight">重点内容包括Stable Diffusion、Tripo AI、TouchDesigner。</span>
-              </p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-header">
-              <span>03/12, 25 10:00 AM – 12:00 PM</span> · <span>Online</span>
-            </div>
-            <div class="card-body">
-              <h3>线上讲座：轻量化人脸识别模型设计</h3>
-              <p>
-                分享于ICCC 2023发表的论文成果，讲述图像质量指标在活体检测中的新思路。
-              </p>
-            </div>
-          </div>
-
+      <div class="left">
+        <img src="assets/img/avatar.png" alt="Profile Photo" />
+        <div class="social-icons">
+          <a href="#"><i class="fas fa-file-alt"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fas fa-envelope"></i></a>
+          <a href="#"><i class="ai ai-zhihu"></i></a>
         </div>
       </div>
 
-      <!-- Year: 2024 -->
-      <div class="container">
-        <div class="year">2024</div>
-        <div class="timeline">
+      <div class="right">
+        <h2>Yu Xinda</h2>
+        <h3>yuxindaaaa@gmail.com</h3>
 
-          <div class="card">
-            <div class="card-header">
-              <span>11/03, 24 13:00 PM – 16:00 PM</span> · <span>Zhejiang Wanli University</span>
-            </div>
-            <div class="card-body">
-              <h3>图像处理与嵌入式系统研讨会</h3>
-              <p>
-                汇报本科阶段关于 <span class="highlight">指纹融合与图像增强</span> 的项目经验，吸引多个实验室负责人关注。
-              </p>
-            </div>
-          </div>
+        <p>
+          I am currently studying for a master's degree in computer science and technology at Huzhou Normal University. My main research direction is computer vision, involving object detection, behavior detection, 3D model generation, etc. 
+        </p>
 
-        </div>
+        <p>
+          In the past, I studied at Zhejiang Wanli University, and my research directions were mainly image processing, fingerprint fusion, face recognition, etc.
+          I published a paper Can Image Quality Metrics Detect Face Liveness? at the EI conference 2023 ICCC, exploring the use of image quality algorithms to improve the accuracy of facial recognition and improve the lightweight of the model. 
+          I have also helped forklift companies optimize obstacle detection algorithms and improve the accuracy of obstacle detection.
+          For more information, please see my <a href="./assets/files/curriculum_vitae.pdf" target="_blank">CV</a>
+        </p>
+        
       </div>
-
     </div>
   </div>
 
