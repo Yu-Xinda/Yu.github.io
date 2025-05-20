@@ -55,7 +55,7 @@ title: About
 
     .wrapper {
 /*       用图片当背景 */
-      background: url('{{ site.background.site }}') repeat;
+      background: url('{{ site.background.site }}') no-repeat center center;
 /*       用纯色当背景 */
 /*       background-color: rgba(230, 240, 255, 0.95); */
       max-width: 1000px;
@@ -65,6 +65,7 @@ title: About
       display: flex;
       flex-wrap: wrap;
       gap: 40px;
+      background-repeat: no-repeat; /* 防止重复 */
       background-size: 150px 150px;
       background-position: center;  /* 居中 */
 
