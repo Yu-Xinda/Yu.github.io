@@ -1,168 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Me</title>
-
-  <!-- 图标库 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-
+  <meta charset="UTF-8">
+  <title>News!</title>
+  <!-- 引入图标库（如果未引入） -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>  
   <style>
     body {
+      font-family: "Microsoft YaHei", sans-serif;
       margin: 0;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      color: #333;
-      background-color: white;
+      padding: 0;
+      background: #f9f9f9;
     }
 
-    /* 顶部区域 */
-    .top-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 40px 10px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .top-bar .back-button {
+    .back-button {
+      display: inline-block;
+      margin: 20px 0 0 20px;
       font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 15px;
+      cursor: pointer;
       text-decoration: none;
-      color: #0056b3;
-      font-weight: bold;
+      color: #333;
     }
 
-    .top-bar h1 {
-      margin: 0 auto;
-      font-size: 28px;
-      text-align: center;
+    .container {
+      display: flex;
+      max-width: 800px;  /* 原来是 1000px，缩小 */
+      margin: 40px auto;
+    }
+
+    .year {
+      flex: 0 0 80px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      padding-top: 20px;
+    }
+
+    .timeline {
       flex: 1;
     }
 
-    .page-container {
-      display: flex;
-      justify-content: center;
-      background-color: white;
-      padding: 0 20px 60px;
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      margin-bottom: 20px;  /* 缩小间距 */
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);  /* 减弱阴影 */
+      overflow: hidden;
+      font-size: 13px;  /* 整体文字略微缩小 */
     }
 
-    .wrapper {
-      background-color: #e6f0ff;
-      max-width: 1000px;
+    .card-header {
+      font-size: 14px;
+      color: #666;
+      padding: 15px 20px 0;
+    }
+
+    .card-header span {
+      margin-right: 10px;
+    }
+
+    .card-image {
       width: 100%;
-      border-radius: 10px;
-      padding: 40px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
+      height: auto;
     }
 
-    .left {
-      flex: 1 1 250px;
-      text-align: center;
+    .card-body {
+      padding: 15px 20px 20px;
     }
 
-    .left img {
-      width: 100%;
-      max-width: 250px;
-      border-radius: 10px;
-      margin-bottom: 20px;
+    .card-body h3 {
+      font-size: 18px;
+      color: #000;
+      margin-bottom: 10px;
     }
 
-    .social-icons a {
-      margin: 0 5px;
-      font-size: 22px;
+    .card-body p {
+      font-size: 14px;
       color: #333;
-      text-decoration: none;
-    }
-
-    .right {
-      flex: 2 1 500px;
-    }
-
-    h2 {
-      font-size: 20px;
-      margin-top: 20px;
-    }
-
-    p {
       line-height: 1.6;
-      margin: 10px 0;
     }
 
-    ul {
-      padding-left: 20px;
+    .highlight {
+      color: red;
+      font-weight: bold;
     }
 
-    ul li {
-      margin: 8px 0;
-    }
-
-    a {
-      color: #0056b3;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .wrapper {
-        flex-direction: column;
-      }
-
-      .top-bar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .top-bar h1 {
-        margin: 10px 0 0;
-        text-align: left;
-      }
+    .page-title {
+      text-align: center;
+      font-size: 36px;
+      color: #222;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
   </style>
 </head>
 <body>
-
-  <!-- 顶部返回按钮 + 标题 -->
-  <div class="top-bar">
-    <a href="javascript:history.back()" class="back-button"><i class="fas fa-arrow-left"></i> Back</a>
-    <h1>About Me</h1>
-    <div style="width: 60px;"></div> <!-- 占位符保持平衡 -->
+  <!-- 顶部返回键 + 标题栏（蓝色背景中间标题） -->
+  <div class="top-bar" style="background-color: white; padding: 16px 40px;">
+    <div style="max-width: 1000px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;">
+      <a href="javascript:history.back()" class="back-button" style="font-size: 16px; text-decoration: none; color: #0056b3 ; font-weight: bold;">
+        <i class="fas fa-arrow-left"></i> Back
+      </a>
+      <h1 style="margin: 0 auto; font-size: 28px; text-align: center; flex: 1; ">News</h1>
+      <div style="width: 60px;"></div> <!-- 占位保持左右平衡 -->
+    </div>
   </div>
-  <!-- 中间蓝色主体部分 -->
-  <div class="page-container">
-    <div class="wrapper">
-      <div class="left">
-        <img src="assets/img/avatar.png" alt="Profile Photo" />
-        <div class="social-icons">
-          <a href="#"><i class="fas fa-file-alt"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fas fa-envelope"></i></a>
-          <a href="#"><i class="ai ai-zhihu"></i></a>
+
+  <!-- 2025 -->
+  <div class="container">
+    <div class="year">2025</div>
+    <div class="timeline">
+
+      <div class="card">
+        <div class="card-header">
+          <span>MM/DD, 25 XX:XX PM – XX:XX PM</span> · <span>Location</span>
+        </div>
+        <img src="./assets/img/academics-activity.png" alt="活动图片" class="card-image">
+        <div class="card-body">
+          <h3>第一条活动标题示例</h3>
+          <p>
+            这是第一条活动的描述内容。可以替换为你的实际信息，也可以继续添加 highlight 强调内容。
+            <span class="highlight">强调内容示例</span>。
+          </p>
         </div>
       </div>
 
-      <div class="right">
-        <h2>Yu Xinda</h2>
-        <h3>yuxindaaaa@gmail.com</h3>
-
-        <p>
-          I am currently studying for a master's degree in computer science and technology at Huzhou Normal University. My main research direction is computer vision, involving object detection, behavior detection, 3D model generation, etc. 
-        </p>
-
-        <p>
-          In the past, I studied at Zhejiang Wanli University, and my research directions were mainly image processing, fingerprint fusion, face recognition, etc.
-          I published a paper Can Image Quality Metrics Detect Face Liveness? at the EI conference 2023 ICCC, exploring the use of image quality algorithms to improve the accuracy of facial recognition and improve the lightweight of the model. 
-          I have also helped forklift companies optimize obstacle detection algorithms and improve the accuracy of obstacle detection.
-          For more information, please see my <a href="./assets/files/curriculum_vitae.pdf" target="_blank">CV</a>
-        </p>
-        
+      <div class="card">
+        <div class="card-header">
+          <span>MM/DD, 25 XX:XX AM – XX:XX PM</span> · <span>Location</span>
+        </div>
+        <div class="card-body">
+          <h3>第二条活动标题示例</h3>
+          <p>
+            这是第二条活动的描述内容。可以替换为你的实际信息，也可以继续添加 highlight 强调内容。
+          </p>
+        </div>
       </div>
+
+    </div>
+  </div>
+
+  <!-- 2024 -->
+  <div class="container">
+    <div class="year">2024</div>
+    <div class="timeline">
+
+      <!-- 第三条记录 -->
+      <div class="card">
+        <div class="card-header">
+          <span>MM/DD, 24 XX:XX PM – XX:XX PM</span> · <span>Location</span>
+        </div>
+        <div class="card-body">
+          <h3>第三条活动标题示例</h3>
+          <p>
+            这是第三条活动的描述内容。可以替换为你的实际信息，也可以继续添加 highlight 强调内容。
+            <span class="highlight">强调内容示例</span>。
+          </p>
+        </div>
+      </div>
+
     </div>
   </div>
 
