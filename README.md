@@ -39,6 +39,9 @@ experience: 过往经历
 avatar: ./assets/img/avatar.png
 favicon: ./assets/img/favicon.png
 favicon_dark: ./assets/img/favicon-dark.png
+backgound:  ##用于设置homepage的背景图和About me的背景图
+      site ./assets/img/pexels-samiro-2102367.jpg
+
 ```
 
 #### index.md
@@ -57,11 +60,15 @@ index.md用于呈现主页内容，其中分为三大板块内容，introduction
 
 可在_includes/news.md中添加个人最新动态，建议news中只呈现3-5条最新消息，其余内容可以通过more跳转到新页面详细了解
 
-### 编辑news/publication详情页
+### 编辑详情页
 
 #### news.html
 
 可在news.html中直接编辑news的详情页内容，具体可根据new.html代码细节更改内容
+
+####about.html
+
+可在about.html中直接编辑about me的详情页内容，具体可根据about.html代码细节更改内容
 
 #### publication.html
 
