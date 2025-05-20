@@ -39,7 +39,7 @@ experience: 过往经历
 avatar: ./assets/img/avatar.png
 favicon: ./assets/img/favicon.png
 favicon_dark: ./assets/img/favicon-dark.png
-backgound:  ##用于设置homepage的背景图和About me的背景图
+backgound:  ##用于设置homepage的背景图和About me的背景图（需要手动调节图片大小以适配内容），也可以使用纯色背景（无需调节）。
       site ./assets/img/pexels-samiro-2102367.jpg
 
 ```
