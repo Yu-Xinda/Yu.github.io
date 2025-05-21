@@ -41,7 +41,7 @@ title: Publications
         <!-- 右内容 -->
         <div class="col-sm-9" style="flex: 1;">
           <div class="title" style="font-weight: 600; font-size: 19px;">
-            <a href="./files/{{ link.pdf }}" style="color: #3498db; text-decoration: none;">{{ link.title }}</a>
+            <a href="./file/{{ link.pdf }}" style="color: #3498db; text-decoration: none;">{{ link.title }}</a>
           </div>
           <div class="author" style="margin-top: 8px; font-size: 14px;">{{ link.authors }}</div>
           <div class="periodical" style="margin-top: 6px; font-style: italic; font-size: 14px;">{{ link.conference }}</div>
@@ -62,7 +62,7 @@ title: Publications
             {% endif %}
 
             {% if link.pdf %}
-            <a href="./files/{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank"
+            <a href="./file/{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank"
               style="font-size: 14px; padding: 3px 8px; background-color: #0056b3; color: white; border: none; border-radius: 3px; text-decoration: none;">PDF</a>
             {% endif %}
 
