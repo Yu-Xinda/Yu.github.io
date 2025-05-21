@@ -11,7 +11,7 @@
   location: "Location"
   title: "第二条活动标题示例"
   description: "这是第二条活动的描述内容。可以替换为你的实际信息，也可以继续添加 highlight 强调内容。"
-  image: "./img/academics-activity.png"
+  image: "./image/academics-activity.png"
   highlight: ""
 
 - year: 2024
