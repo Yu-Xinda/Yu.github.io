@@ -28,7 +28,7 @@ main:
         year={2025}
       }
     code: https://github.com/MrGiovanni/ContinualLearning
-    image: ./assets/img/teaser_example.png
+    image: ./publication/image/teaser_example.png
 
   - title: "Mnemonics Training: Multi-Class Incremental Learning without Forgetting"
     authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
@@ -52,4 +52,4 @@ main:
         year={2020}
       }
     notes: Oral Presentation
-    image: ./assets/img/teaser_example_2.png
+    image: ./publication/image/teaser_example_2.png
