@@ -1,44 +1,141 @@
 ---
-layout: default
-title: News
+layout: null
+title: News!
 ---
 
-<!-- 页面顶部栏 -->
-<div class="top-bar" style="padding: 16px 40px;">
-  <div style="max-width: 1000px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;">
-    <a href="javascript:history.back()" class="back-button" style="font-size: 16px; text-decoration: none; color: #0056b3; font-weight: bold;">
-      <i class="fas fa-arrow-left"></i> Back
-    </a>
-    <h1 style="margin: 0 auto; font-size: 28px; text-align: center; flex: 1;">News</h1>
-    <div style="width: 60px;"></div>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>News!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <style>
+    body {
+      font-family: "Microsoft YaHei", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
 
-<!-- 开始遍历分组内容 -->
-{% assign news_by_year = site.data.news | group_by: "year" | sort: "name" | reverse %}
-{% for group in news_by_year %}
-  <div class="container">
-    <div class="year">{{ group.name }}</div>
-    <div class="timeline">
-      {% for item in group.items %}
-      <div class="card">
-        <div class="card-header">
-          <span>{{ item.date }}</span> · <span>{{ item.location }}</span>
-        </div>
-        {% if item.image %}
-        <img src="{{ item.image }}" alt="活动图片" class="card-image">
-        {% endif %}
-        <div class="card-body">
-          <h3>{{ item.title }}</h3>
-          <p>
-            {{ item.description }}
-            {% if item.highlight %}
-              <span class="highlight">{{ item.highlight }}</span>
-            {% endif %}
-          </p>
-        </div>
-      </div>
-      {% endfor %}
+    .back-button {
+      display: inline-block;
+      margin: 20px 0 0 20px;
+      font-size: 16px;
+      text-decoration: none;
+      color: #0056b3;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      max-width: 800px;
+      margin: 40px auto;
+    }
+
+    .year {
+      flex: 0 0 80px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      padding-top: 20px;
+    }
+
+    .timeline {
+      flex: 1;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      font-size: 13px;
+    }
+
+    .card-header {
+      font-size: 14px;
+      color: #666;
+      padding: 15px 20px 0;
+    }
+
+    .card-header span {
+      margin-right: 10px;
+    }
+
+    .card-image {
+      width: 100%;
+      height: auto;
+    }
+
+    .card-body {
+      padding: 15px 20px 20px;
+    }
+
+    .card-body h3 {
+      font-size: 18px;
+      color: #000;
+      margin-bottom: 10px;
+    }
+
+    .card-body p {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: red;
+      font-weight: bold;
+    }
+
+    h1.page-title {
+      text-align: center;
+      font-size: 36px;
+      color: #222;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 返回按钮 + 标题 -->
+  <div class="top-bar" style="padding: 16px 40px;">
+    <div style="max-width: 1000px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;">
+      <a href="javascript:history.back()" class="back-button">
+        <i class="fas fa-arrow-left"></i> Back
+      </a>
+      <h1 class="page-title" style="margin: 0 auto; font-size: 28px; flex: 1;">News</h1>
+      <div style="width: 60px;"></div>
     </div>
   </div>
-{% endfor %}
+
+  {% assign years = site.data.news | map: "year" | uniq | sort | reverse %}
+  {% for year in years %}
+    <div class="container">
+      <div class="year">{{ year }}</div>
+      <div class="timeline">
+        {% assign items = site.data.news | where: "year", year %}
+        {% for item in items %}
+        <div class="card">
+          <div class="card-header">
+            <span>{{ item.date }}</span> · <span>{{ item.location }}</span>
+          </div>
+          {% if item.image %}
+          <img src="{{ item.image }}" alt="活动图片" class="card-image">
+          {% endif %}
+          <div class="card-body">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+
+</body>
+</html>
