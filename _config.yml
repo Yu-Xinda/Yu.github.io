@@ -14,7 +14,7 @@ keywords: minimal light
 description: The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.
 canonical: https://minimal-light-theme.yliu.me/
 background:
-  site: assets/img/pexels-samiro-2102367.jpg
+  site: ./assets/img/pexels-samiro-2102367.jpg
 # Links 
 # If you don't need one of them, you may delete the corresponding line.
 
