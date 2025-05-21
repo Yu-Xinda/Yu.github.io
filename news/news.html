@@ -124,7 +124,7 @@ title: News!
           <div class="card-header">
             <span>{{ item.date }}</span> · <span>{{ item.location }}</span>
           </div>
-          {% if item.image %}
+          {% if item.image and item.image != "" %}
           <img src="{{ item.image }}" alt="活动图片" class="card-image">
           {% endif %}
           <div class="card-body">
