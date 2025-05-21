@@ -8,13 +8,13 @@ experience:
   - 2020 - 2024：
   - B.E. ZhejiangWanli University
 email: yuxindaaaa@gmail.com
+background:
+  site: ./assets/img/pexels-samiro-2102367.jpg
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
 keywords: minimal light
 description: The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.
 canonical: https://minimal-light-theme.yliu.me/
-background:
-  site: ./assets/img/pexels-samiro-2102367.jpg
 # Links 
 # If you don't need one of them, you may delete the corresponding line.
 
