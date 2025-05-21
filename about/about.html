@@ -1,5 +1,4 @@
 ---
-layout: default
 title: About
 ---
 
@@ -8,11 +7,10 @@ title: About
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Me</title>
+  <title>{{ page.title }}</title>
 
   <!-- 图标库 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-
   <style>
     body {
       margin: 0;
@@ -139,17 +137,15 @@ title: About
   </style>
 </head>
 <body>
-
-  <!-- 顶部返回按钮 + 标题 -->
+  <!-- 页面内容结构不变，只改为使用 site.data 取值 -->
   <div class="top-bar">
     <a href="javascript:history.back()" class="back-button"><i class="fas fa-arrow-left"></i> Back</a>
-    <h1>About Me</h1>
-    <div style="width: 60px;"></div> <!-- 占位符保持平衡 -->
+    <h1>{{ page.title }}</h1>
+    <div style="width: 60px;"></div>
   </div>
 
-  <!-- 中间蓝色主体部分 -->
   <div class="page-container">
-    <div class="wrapper">
+    <div class="wrapper" style="background: url('{{ site.background.site }}') no-repeat center center; background-size: 1200px 1000px;">
       <div class="left">
         <img src="assets/img/avatar.png" alt="Profile Photo" />
         <div class="social-icons">
@@ -171,6 +167,5 @@ title: About
       </div>
     </div>
   </div>
-
 </body>
 </html>
