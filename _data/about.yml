@@ -1,9 +1,8 @@
 name: Yu Xinda
 email: yuxindaaaa@gmail.com
-paragraphs1: >
+paragraph1: >
   I am currently studying for a master's degree in computer science and technology at Huzhou Normal University. My main research direction is computer vision, involving object detection, behavior detection, 3D model generation, etc.
-
-paragraphs2: >
+paragraph2: >
   In the past, I studied at Zhejiang Wanli University, and my research directions were mainly image processing, fingerprint fusion, face recognition, etc.
   I published a paper *Can Image Quality Metrics Detect Face Liveness?* at the EI conference 2023 ICCC, exploring the use of image quality algorithms to improve the accuracy of facial recognition and improve the lightweight of the model.
   I have also helped forklift companies optimize obstacle detection algorithms and improve the accuracy of obstacle detection.
