@@ -9,7 +9,7 @@
     <a href="./assets/files/curriculum_vitae.pdf" target="_blank">[PDF]</a>
   </p>
   <p style="font-size: 16px; text-align: center; margin-bottom: 0px;">
-    <a href="http://Yu-Xinda.github.io/publication/publication.html" style="text-decoration: underline; color: #888;">
+    <a href="./publication/publication.html" style="text-decoration: underline; color: #888;">
         -🔺 more - <!--用于跳转到详情页--> 
     </a>
   </p>
