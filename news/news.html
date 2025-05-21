@@ -3,169 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <title>News!</title>
-  <!-- 引入图标库（如果未引入） -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>  
   <style>
-    body {
-      font-family: "Microsoft YaHei", sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-    }
-
-    .back-button {
-      display: inline-block;
-      margin: 20px 0 0 20px;
-      font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      padding: 8px 15px;
-      cursor: pointer;
-      text-decoration: none;
-      color: #333;
-    }
-
-    .container {
-      display: flex;
-      max-width: 800px;  /* 原来是 1000px，缩小 */
-      margin: 40px auto;
-    }
-
-    .year {
-      flex: 0 0 80px;
-      font-size: 24px;
-      font-weight: bold;
-      color: #333;
-      padding-top: 20px;
-    }
-
-    .timeline {
-      flex: 1;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 8px;
-      margin-bottom: 20px;  /* 缩小间距 */
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);  /* 减弱阴影 */
-      overflow: hidden;
-      font-size: 13px;  /* 整体文字略微缩小 */
-    }
-
-    .card-header {
-      font-size: 14px;
-      color: #666;
-      padding: 15px 20px 0;
-    }
-
-    .card-header span {
-      margin-right: 10px;
-    }
-
-    .card-image {
-      width: 100%;
-      height: auto;
-    }
-
-    .card-body {
-      padding: 15px 20px 20px;
-    }
-
-    .card-body h3 {
-      font-size: 18px;
-      color: #000;
-      margin-bottom: 10px;
-    }
-
-    .card-body p {
-      font-size: 14px;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    .highlight {
-      color: red;
-      font-weight: bold;
-    }
-
-    .page-title {
-      text-align: center;
-      font-size: 36px;
-      color: #222;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
+    body { font-family: "Microsoft YaHei", sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
+    .back-button { display: inline-block; margin: 20px 0 0 20px; font-size: 16px; border: none; border-radius: 8px; padding: 8px 15px; cursor: pointer; text-decoration: none; color: #333; }
+    .container { display: flex; max-width: 800px; margin: 40px auto; }
+    .year { flex: 0 0 80px; font-size: 24px; font-weight: bold; color: #333; padding-top: 20px; }
+    .timeline { flex: 1; }
+    .card { background: #fff; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); overflow: hidden; font-size: 13px; }
+    .card-header { font-size: 14px; color: #666; padding: 15px 20px 0; }
+    .card-header span { margin-right: 10px; }
+    .card-image { width: 100%; height: auto; }
+    .card-body { padding: 15px 20px 20px; }
+    .card-body h3 { font-size: 18px; color: #000; margin-bottom: 10px; }
+    .card-body p { font-size: 14px; color: #333; line-height: 1.6; }
+    .highlight { color: red; font-weight: bold; }
   </style>
 </head>
 <body>
-  <!-- 顶部返回键 + 标题栏（蓝色背景中间标题） -->
   <div class="top-bar" style=" padding: 16px 40px;">
     <div style="max-width: 1000px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;">
       <a href="javascript:history.back()" class="back-button" style="font-size: 16px; text-decoration: none; color: #0056b3 ; font-weight: bold;">
         <i class="fas fa-arrow-left"></i> Back
       </a>
       <h1 style="margin: 0 auto; font-size: 28px; text-align: center; flex: 1; ">News</h1>
-      <div style="width: 60px;"></div> <!-- 占位保持左右平衡 -->
+      <div style="width: 60px;"></div>
     </div>
   </div>
 
-  <!-- 2025 -->
+  {% assign years = site.data.news | group_by: "year" %}
+  {% for year in years %}
   <div class="container">
-    <div class="year">2025</div>
+    <div class="year">{{ year.name }}</div>
     <div class="timeline">
-
+      {% for link in year.items %}
       <div class="card">
         <div class="card-header">
-          <span>4/11, 25 10:00 AM – 1:00 PM</span> · <span> Zhejiang HuZhou</span>
+          <span>{{ link.date }}</span> · <span>{{ link.location }}</span>
         </div>
+        {% if link.image %}
+        <img src="{{ link.image }}" alt="活动图片" class="card-image">
+        {% endif %}
         <div class="card-body">
-          <h3>被湖州师范学院录取为硕士研究生！</h3>
+          <h3>{{ link.title }}</h3>
           <p>
-            已被录取为湖州师范学院计算机科学与技术研究生，希望能在新的环境中多多学习新知识，突破自我！
-            <span class="highlight"></span>
+            {{ link.description }}
+            {% if link.highlight %}
+              <span class="highlight">{{ link.highlight }}</span>
+            {% endif %}
           </p>
         </div>
       </div>
-
-      <div class="card">
-        <div class="card-header">
-          <span>MM/DD, 25 XX:XX AM – XX:XX PM</span> · <span>Location</span>
-        </div>
-        <img src="./assets/img/academics-activity.png" alt="活动图片" class="card-image">
-        <div class="card-body">
-          <h3>第二条活动标题示例</h3>
-          <p>
-            这是第二条活动的描述内容。可以替换为你的实际信息，也可以继续添加 highlight 强调内容。
-          </p>
-        </div>
-      </div>
-
+      {% endfor %}
     </div>
   </div>
-
-  <!-- 2024 -->
-  <div class="container">
-    <div class="year">2024</div>
-    <div class="timeline">
-
-      <!-- 第三条记录 -->
-      <div class="card">
-        <div class="card-header">
-          <span>MM/DD, 24 XX:XX PM – XX:XX PM</span> · <span>Location</span>
-        </div>
-        <div class="card-body">
-          <h3>第三条活动标题示例</h3>
-          <p>
-            这是第三条活动的描述内容。可以替换为你的实际信息，也可以继续添加 highlight 强调内容。
-            <span class="highlight">强调内容示例</span>。
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
+  {% endfor %}
 </body>
 </html>
