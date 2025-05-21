@@ -1,17 +1,17 @@
 ---
 layout: default
-title: About Me
+title: About
 ---
 
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ page.title }}</title>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me</title>
+
   <!-- 图标库 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 
   <style>
     body {
@@ -21,6 +21,7 @@ title: About Me
       background-color: white;
     }
 
+    /* 顶部区域 */
     .top-bar {
       display: flex;
       align-items: center;
@@ -32,7 +33,7 @@ title: About Me
       border-radius: 10px;
     }
 
-    .back-button {
+    .top-bar .back-button {
       font-size: 16px;
       text-decoration: none;
       color: #0056b3;
@@ -53,6 +54,10 @@ title: About Me
     }
 
     .wrapper {
+/*       用图片当背景 */
+      background: url('{{ site.background.site }}') no-repeat center center;
+/*       用纯色当背景 */
+/*       background-color: rgba(230, 240, 255, 0.95); */
       max-width: 1000px;
       width: 100%;
       border-radius: 10px;
@@ -60,12 +65,10 @@ title: About Me
       display: flex;
       flex-wrap: wrap;
       gap: 40px;
-      background-color: #e6f0ff;
-      /* 如果你有背景图片，改这里 */
-      /* background: url('{{ site.background.site }}') no-repeat center center; */
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+      background-repeat: no-repeat; /* 防止重复 */
+      background-size: 1200px 1000px;/*根据内容和图片手动调整背景大小，前宽后高*/
+      background-position: center;  /* 居中 */
+
     }
 
     .left {
@@ -87,10 +90,6 @@ title: About Me
       text-decoration: none;
     }
 
-    .social-icons a:hover {
-      color: #0056b3;
-    }
-
     .right {
       flex: 2 1 500px;
     }
@@ -100,15 +99,17 @@ title: About Me
       margin-top: 20px;
     }
 
-    h3 {
-      margin-top: 10px;
-      color: #555;
-      font-weight: normal;
-    }
-
     p {
       line-height: 1.6;
       margin: 10px 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin: 8px 0;
     }
 
     a {
@@ -138,12 +139,15 @@ title: About Me
   </style>
 </head>
 <body>
+
+  <!-- 顶部返回按钮 + 标题 -->
   <div class="top-bar">
     <a href="javascript:history.back()" class="back-button"><i class="fas fa-arrow-left"></i> Back</a>
-    <h1>{{ page.title }}</h1>
-    <div style="width: 60px;"></div>
+    <h1>About Me</h1>
+    <div style="width: 60px;"></div> <!-- 占位符保持平衡 -->
   </div>
 
+  <!-- 中间蓝色主体部分 -->
   <div class="page-container">
     <div class="wrapper">
       <div class="left">
@@ -151,7 +155,7 @@ title: About Me
         <div class="social-icons">
           <a href="#"><i class="fas fa-file-alt"></i></a>
           <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/Yu-Xinda" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+          <a href="https://github.com/Yu-Xinda"><i class="fab fa-github"></i></a>
           <a href="#"><i class="fas fa-envelope"></i></a>
           <a href="#"><i class="ai ai-zhihu"></i></a>
         </div>
@@ -162,17 +166,19 @@ title: About Me
         <h3>yuxindaaaa@gmail.com</h3>
 
         <p>
-          I am currently studying for a master's degree in computer science and technology at Huzhou Normal University. My main research direction is computer vision, involving object detection, behavior detection, 3D model generation, etc.
+          I am currently studying for a master's degree in computer science and technology at Huzhou Normal University. My main research direction is computer vision, involving object detection, behavior detection, 3D model generation, etc. 
         </p>
 
         <p>
           In the past, I studied at Zhejiang Wanli University, and my research directions were mainly image processing, fingerprint fusion, face recognition, etc.
-          I published a paper <em>Can Image Quality Metrics Detect Face Liveness?</em> at the EI conference 2023 ICCC, exploring the use of image quality algorithms to improve the accuracy of facial recognition and improve the lightweight of the model.
+          I published a paper <em>Can Image Quality Metrics Detect Face Liveness?</em> at the EI conference 2023 ICCC, exploring the use of image quality algorithms to improve the accuracy of facial recognition and improve the lightweight of the model. 
           I have also helped forklift companies optimize obstacle detection algorithms and improve the accuracy of obstacle detection.
-          For more information, please see my <a href="./assets/files/curriculum_vitae.pdf" target="_blank" rel="noopener">CV</a>.
+          For more information, please see my <a href="./assets/files/curriculum_vitae.pdf" target="_blank">CV</a>
         </p>
+        
       </div>
     </div>
   </div>
+
 </body>
 </html>
