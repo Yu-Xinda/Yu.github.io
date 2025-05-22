@@ -88,14 +88,18 @@
         vertical-align: middle;
       }
 /*       更改个人简介文字样式 */
-      .profile-text {
+      .profile-text-exp {
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         margin-top: 10px;
         color: #333;
         line-height: 1.6;
         text-align: left;
       }
-      .center-block {
+      .profile-text {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        margin-top: 10px;
+        color: #333;
+        line-height: 1.6;
         text-align: center;
       }
     </style>
@@ -111,21 +115,19 @@
           </a>
           {% endif %}
           <!-- 以下文字居中 -->
-          <div class="center-block">
-            <h1>{{ site.title }}</h1>
-        
-            {% if site.state %}
-            <p class="profile-text">{{ site.state }}</p>
-            {% endif %}
-        
-            {% if site.email %}
-            <p class="profile-text">{{ site.email }}</p>
-            {% endif %}
-        
-            {% if site.university %}
-            <p class="profile-text">{{ site.university }}</p>
-            {% endif %}
-          </div>
+          <h1>{{ site.title }}</h1>
+      
+          {% if site.state %}
+          <p class="profile-text">{{ site.state }}</p>
+          {% endif %}
+      
+          {% if site.email %}
+          <p class="profile-text">{{ site.email }}</p>
+          {% endif %}
+      
+          {% if site.university %}
+          <p class="profile-text">{{ site.university }}</p>
+          {% endif %}
           
 <!--           {% if site.location %}
           <p class="profile-text">
@@ -138,9 +140,9 @@
             {% for item in site.experience %}
               {% assign mod = index | modulo: 2 %}
               {% if mod == 0 %}
-              <p class="profile-text"">{{ item }}</p>
+              <p class="profile-text-exp"">{{ item }}</p>
               {% else %}
-              <p class="profile-text"">&emsp;&emsp;{{ item }}</p>
+              <p class="profile-text-exp"">&emsp;&emsp;{{ item }}</p>
               {% endif %}
               {% assign index = index | plus: 1 %}
             {% endfor %}
