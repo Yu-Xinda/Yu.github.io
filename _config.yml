@@ -1,42 +1,32 @@
 # Basic Information 
-title: Yu Xinda
-state: Master student
-university:   Huzhou University
-location:   Zhejiang Province
-experience: 
+title: Yu Xinda  #姓名
+state: Master student #当前状态
+university:   Huzhou University #所在大学
+experience:  #个人经历设置，请根据以下格式“一行时间一行经历”来写
   - 2025 - Now：
   - B.Sc. Huzhou University 
   - 2020 - 2024：
   - B.E. ZhejiangWanli University
 email: yuxindaaaa@gmail.com
-background:
+
+# 图标背景设置
+avatar: ./assets/img/avatar.png  #个人头像图片
+favicon: ./assets/img/favicon.png  #打开标题页图标
+background:    #用于设置homepage的背景图和About me的背景图（需要手动调节图片大小以适配内容），也可以使用纯色背景（无需调节）。
   site: https://yu-xinda.github.io/assets/img/pexels-samiro-2102367.jpg
-# Search Engine Optimization (SEO)
-# The following information is used to improve the website traffic from search engines, e.g., Google.
+
+# 自动深夜模式
+auto_dark_mode: true
+
+# 字体样式
+font: "Serif" # or "Sans Serif"
+
+#模板的默认配置，若不更换模板可忽视
 keywords: minimal light
 description: The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.
 canonical: https://minimal-light-theme.yliu.me/
-# Links 
-# If you don't need one of them, you may delete the corresponding line.
 
-# Images (e.g., your profile picture and your website's favicon) 
-# "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
-avatar: ./assets/img/avatar.png
-favicon: ./assets/img/favicon.png
-favicon_dark: ./assets/img/favicon-dark.png
-
-# Footnote
-# You may use the option to disable the footnote, "Powered by Jekyll and Minimal Light theme."
-
-# Auto Dark Mode
-# You may use the option to disable the automatic dark theme
-auto_dark_mode: true
-
-# Font
-# You can use this option to choose between Serif or Sans Serif fonts.
-font: "Serif" # or "Sans Serif"
-
-# The following files will be removed from the generated website.
+# 以下的文件开头会被显示成网页，不然以下划线为开头的文件会被Jekyll自动隐藏
 include:
   - _about
   - _news
