@@ -109,23 +109,30 @@
           {% endif %}
 
           <h1>{{ site.title }}</h1>
-
+          
+          {% if site.state %}
+          <p class="profile-text">
+            &emsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ site.state }}
+          </p>
+          {% endif %}
+          
           {% if site.email %}
           <p class="profile-text">
-            &emsp;&nbsp;&nbsp;<i class="fas fa-envelope profile-icon"></i>&nbsp;&nbsp;{{ site.email }}
+            &emsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ site.email }}
           </p>
           {% endif %}
 
           {% if site.university %}
           <p class="profile-text">
-            &emsp;&nbsp;&nbsp;<i class="fas fa-university profile-icon"></i>&emsp;&nbsp;&nbsp;{{ site.university }}
+            &emsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;{{ site.university }}
           </p>
           {% endif %}
-          {% if site.location %}
+          
+<!--           {% if site.location %}
           <p class="profile-text">
-            &emsp;&nbsp;&nbsp;<i class="fas fa-map-marker-alt profile-icon"></i>&emsp;&nbsp;&nbsp;{{ site.location }}
+            &emsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;{{ site.location }}
           </p>
-          {% endif %}
+          {% endif %} -->
 
           {% if site.experience %}
             {% assign index = 0 %}
