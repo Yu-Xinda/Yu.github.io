@@ -27,7 +27,7 @@ main:
         booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
         year={2025}
       }
-    pdf: ./file/curriculum_vitae.pdf  ##这里的默认存储路径是publication/file/curriculum_vitae.pdf,是将pdf存储在仓库内
+    pdf: ./file/curriculum_vitae.pdf  ##这里的默认存储路径是 _publication/file/curriculum_vitae.pdf 是将pdf存储在仓库内
     code: https://github.com/MrGiovanni/ContinualLearning
 
   - title: "Mnemonics Training: Multi-Class Incremental Learning without Forgetting"
