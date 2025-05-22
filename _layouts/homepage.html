@@ -96,6 +96,9 @@
         line-height: 1.6;
         text-align: left;
       }
+      .center-block {
+        text-align: center;
+      }
     </style>
   </head>
 
@@ -108,27 +111,29 @@
             <img src="{{ site.avatar }}" alt="avatar" />
           </a>
           {% endif %}
-
-          <h1>{{ site.title }}</h1>
-          
-          {% if site.state %}
-          <p class="profile-text">;{{ site.state }}</p>
-          {% endif %}
-          
-          {% if site.email %}
-          <p class="profile-text">{{ site.email }} </p>
-          {% endif %}
-
-          {% if site.university %}
-          <p class="profile-text">{{ site.university }}</p>
-          {% endif %}
+          <!-- 以下文字居中 -->
+          <div class="center-block">
+            <h1>{{ site.title }}</h1>
+        
+            {% if site.state %}
+            <p class="profile-text">{{ site.state }}</p>
+            {% endif %}
+        
+            {% if site.email %}
+            <p class="profile-text">{{ site.email }}</p>
+            {% endif %}
+        
+            {% if site.university %}
+            <p class="profile-text">{{ site.university }}</p>
+            {% endif %}
+          </div>
           
 <!--           {% if site.location %}
           <p class="profile-text">
             &emsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;{{ site.location }}
           </p>
           {% endif %} -->
-
+          <!-- experience 不居中 -->
           {% if site.experience %}
             {% assign index = 0 %}
             {% for item in site.experience %}
