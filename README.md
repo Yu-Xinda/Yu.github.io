@@ -26,7 +26,7 @@
 
 主页的分布情况如图
 
-(./assets/img/README_homepage.png)
+![11](./assets/img/README_homepage.png)
 
 主页主要分成个人信息板块（左）和具体信息板块（右）
 
