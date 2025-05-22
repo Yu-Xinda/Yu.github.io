@@ -91,6 +91,7 @@
       .profile-text {
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         margin-top: 10px;
+        text-align: center;
         color: #333;
         line-height: 1.6;
         text-align: left;
@@ -111,21 +112,15 @@
           <h1>{{ site.title }}</h1>
           
           {% if site.state %}
-          <p class="profile-text">
-            &emsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ site.state }}
-          </p>
+          <p class="profile-text">;{{ site.state }}</p>
           {% endif %}
           
           {% if site.email %}
-          <p class="profile-text">
-            &emsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ site.email }}
-          </p>
+          <p class="profile-text">{{ site.email }} </p>
           {% endif %}
 
           {% if site.university %}
-          <p class="profile-text">
-            &emsp;&nbsp;&nbsp;&emsp;&nbsp;&nbsp;{{ site.university }}
-          </p>
+          <p class="profile-text">{{ site.university }}</p>
           {% endif %}
           
 <!--           {% if site.location %}
